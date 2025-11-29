@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakura Style Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #ffb7c5, #ff4d6d);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 95%;
+      max-width: 450px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(255, 0, 100, 0.4);
+      margin-top: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .btn {
+      width: 100%;
+      background: #ff4d6d;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff879c;
+    }
+
+    .hidden-box {
+      display: none;
+      margin-top: 15px;
+      background: rgba(255,255,255,0.25);
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Happy Birthday!</h1>
+  <p>Wishing you joy, love, and the brightest year ahead.</p>
+
+  <div class="card">
+    <button class="btn" onclick="toggleBox()">Click Me 🎀</button>
+    <div id="box" class="hidden-box">
+      💖 Surprise! You're amazing and deserve all the happiness in the world 🌸
+    </div>
+  </div>
+
+  <div class="card">
+    <button class="btn" onclick="changeColor()">Change Theme 🌸</button>
+  </div>
+
+  <script>
+    function toggleBox() {
+      const box = document.getElementById('box');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function changeColor() {
+      const body = document.body;
+      body.style.background =
+        body.style.background.includes('#ffb7c5')
+          ? 'linear-gradient(to bottom right, #ff4d6d, #ffb7c5)'
+          : 'linear-gradient(to bottom right, #ffb7c5, #ff4d6d)';
+    }
+  </script>
+
+</body>
+</html>
